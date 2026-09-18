@@ -5,6 +5,7 @@ import torch
 
 
 def make_dataset(n_samples: int = 400):
+    """Return synthetic features (n_samples, 4) and binary labels from a linear boundary."""
     x = torch.randn(n_samples, 4)
     y = (x[:, 0] + 0.8 * x[:, 1] - 0.5 * x[:, 2] > 0).long()
     return x, y

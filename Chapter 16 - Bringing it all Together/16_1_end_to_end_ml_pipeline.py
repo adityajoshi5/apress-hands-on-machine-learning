@@ -21,10 +21,12 @@ def main() -> None:
         }
     )
 
-    x = data[["age", "salary", "city"]]
-    y = data["bought"]
+    features = data[["age", "salary", "city"]]
+    target = data["bought"]
 
-    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=42, stratify=y)
+    x_train, x_test, y_train, y_test = train_test_split(
+        features, target, test_size=0.3, random_state=42, stratify=target
+    )
 
     preprocessor = ColumnTransformer(
         transformers=[

@@ -5,6 +5,7 @@ import torch
 
 
 def build_sequence_data(samples: int = 300, timesteps: int = 12):
+    """Return inputs of shape (samples, timesteps, 1) and labels based on positive sequence sum."""
     x = torch.randn(samples, timesteps, 1)
     y = (x.sum(dim=1).squeeze(-1) > 0).long()
     return x, y
