@@ -28,7 +28,9 @@ def main() -> None:
     axes[1].set_ylim(50, 100)
 
     plt.tight_layout()
-    plt.show()
+    output_path = "chapter03_loss_accuracy_plot.png"
+    plt.savefig(output_path, dpi=150, bbox_inches="tight")
+    print(f"Saved visualization to {output_path}")
 
 
 if __name__ == "__main__":

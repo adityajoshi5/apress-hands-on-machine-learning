@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Chapter 14: Convolutional neural network for toy image classification."""
+"""Chapter 14: Concolutional neural network for toy image classification."""
 
 import torch
 
